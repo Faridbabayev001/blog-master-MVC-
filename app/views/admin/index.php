@@ -25,7 +25,7 @@
           <tr>
             <th>#</th>
             <th>Author</th>
-            <th>News</th>
+            <th style="width:450px">News</th>
             <th>Image</th>
             <th>View</th>
             <th>Actions</th>
@@ -35,10 +35,10 @@
                 <td><?=$view['id']?></td>
                 <td><?=$view['author']?></td>
                 <td><?=$view['about']?></td>
-                <td><?=$view['image']?></td>
+                <td><img src="<?=url.'public/images/'.$view['image']?>"></td>
                 <td><?=$view['view']?></td>
                 <td>
-                  <a class="btn btn-danger" href="#">Delete</a>
+                  <a class="btn btn-danger" href="<?=url.'Admin/delete/'.$view['id']?>">Delete</a>
                   <a class="btn btn-primary" href="#">Update</a>
                   <a class="btn btn-info" href="#">Read</a>
                 </td>

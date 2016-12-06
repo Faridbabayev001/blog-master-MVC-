@@ -48,7 +48,10 @@ Class Database {
         $send = $this->conn->query($sql);
 
         if ($send->num_rows == 1) {
-            $this->result = $send->fetch_assoc();
+            // $this->result = $send->fetch_assoc();
+            while ($row = $send->fetch_assoc()) {
+                array_push($this->result, $row);
+            }
         } elseif ($send->num_rows > 1) {
             while ($row = $send->fetch_assoc()) {
                 array_push($this->result, $row);

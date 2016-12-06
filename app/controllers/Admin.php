@@ -28,12 +28,20 @@ class Admin extends baseController
     if (isset($_POST['submit'])) {
       $target_dir = url."public/uploads/";
         $target_file = date('dmYGis'). basename($_FILES["image"]["name"]);
-           move_uploaded_file($_FILES["image"]["tmp_name"],url."public/uploads/".$target_file);
+           move_uploaded_file($_FILES["image"]["tmp_name"],$target_dir.$target_file);
            $this->session->setSession('createErrorMsj','Bosluq buraxmayin');
-           print_r($_FILES["image"]['name']);
+           print_r($target_file);
           //  header('location:'.url.'Admin/create');
     }else {
       header('location:'.url.'Admin/create');
     }
+  }
+
+  public function delete($id)
+  {
+    $id = (int)$id;
+    $this->model->getDeleteData($id);
+    $this->session->setSession('delteMsj','Data ugurla silindi');
+      header('Location:'.url.'Admin');
   }
 }

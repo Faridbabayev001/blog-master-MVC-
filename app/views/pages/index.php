@@ -56,42 +56,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="main">
 		<div class="content">
-			<div class="box1">
-			    <h2><a href="Home/single">Making it look like readable English. Many desktop publishing packages and web page</a></h2>
-			    <span>By Kieth Deviec- 2 hours ago</span>
-				<div class="box1_img">
-				    <img src="public/images/img1.jpg" alt="" />
+			<?php foreach($news as $new){ ?>
+				<div class="box1">
+					<h2><a href="Home/single"><?=$new['title']?></span>
+					<div class="box1_img">
+						<img src="<?=url.'public/images/'.$new['image']?>">
+					</div>
+					<div class="data">
+						<p><?=$new['about']?></p>
+						<a href="single.html">Continue reading >>></a>
+					</div>
+					<div class="clear"></div>
 				</div>
-				<div class="data">
-				    <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editorsLorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors</p>
-				    <a href="single.html">Continue reading >>></a>
-				</div>
-			<div class="clear"></div>
-			</div>
-		<div class="box1">
-		    <h2><a href="single.html">Making it look like readable English. Many desktop publishing packages and web page</a></h2>
-		    <span>By Fred G.Meyer- 10 hours ago</span>
-			<div class="box1_img">
-			    <img src="public/images/img2.jpg" alt="" />
-			</div>
-			<div class="data">
-			    <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editorsLorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors</p>
-			    <a href="single.html">Continue reading >>></a>
-			</div>
-		<div class="clear"></div>
-		</div>
-		<div class="box1">
-		    <h2><a href="single.html">Making it look like readable English. Many desktop publishing packages and web page</a></h2>
-		    <span>By R.J Cliton - 1 day ago</span>
-			<div class="box1_img">
-			    <img src="public/images/img3.jpg" alt="" />
-			</div>
-			<div class="data">
-			    <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editorsLorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors</p>
-			    <a href="single.html">Continue reading >>></a>
-			</div>
-		<div class="clear"></div>
-		</div>
+			<?php } ?>
 		<div class="page_links">
 			<div class="next_button">
 				 <a href="#">Next</a>

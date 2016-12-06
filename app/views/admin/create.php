@@ -28,7 +28,7 @@
                     $this->session->deleteSession('createErrorMsj');
        ?>
         <div class="col-md-6 col-md-offset-2">
-          <form class="" action="<?=url.'Admin/create_data'?>" method="post">
+          <form class="" action="<?=url.'Admin/create_data'?>" method="post" enctype="multipart/form-data">
             <label style="margin-top:25px">Author</label>
             <input type="text" class="form-control" name="author" value="">
             <label>News</label>
