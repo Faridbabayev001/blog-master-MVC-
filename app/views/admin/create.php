@@ -31,6 +31,8 @@
           <form class="" action="<?=url.'Admin/create_data'?>" method="post" enctype="multipart/form-data">
             <label style="margin-top:25px">Author</label>
             <input type="text" class="form-control" name="author" value="">
+            <label>Title</label>
+            <input type="text" class="form-control" name="title" value="">
             <label>News</label>
             <input type="text" class="form-control" name="news" value="">
             <label>Image</label>

@@ -9,8 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>The Free Blogsite.com Website Template | Home :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <link href="public/css/style.css" rel="stylesheet" type="text/css" media="all"/> -->
-<link href="public/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="<?=PublicUrl.'css/style.css'?>" rel="stylesheet" type="text/css" media="all"/>
 <link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -58,13 +57,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="content">
 			<?php foreach($news as $new){ ?>
 				<div class="box1">
-					<h2><a href="Home/single"><?=$new['title']?></span>
+					<h2><a href="<?=url.'Home/single/'.$new['id']?>"><?=$new['title']?></span>
 					<div class="box1_img">
-						<img src="<?=url.'public/images/'.$new['image']?>">
+						<img width="300px" src="<?=PublicUrl.'uploads/'.$new['image']?>">
 					</div>
 					<div class="data">
 						<p><?=$new['about']?></p>
-						<a href="single.html">Continue reading >>></a>
+						<a href="<?=url.'Home/single/'.$new['id']?>">Continue reading >>></a>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -144,13 +143,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<h3>We're Social</h3>
 		<div class="img_list">
 		    <ul>
-		     <li><img src="public/images/facebook.png" alt="" /><a href="#">Facebook</a></li>
-		     <li><img src="public/images/flickr.png" alt="" /><a href="#">Flickr</a></li>
-		     <li><img src="public/images/google.png" alt="" /><a href="#">Google</a></li>
-		     <li><img src="public/images/yahoo.png" alt="" /><a href="#">Yahoo</a></li>
-		     <li><img src="public/images/youtube.png" alt="" /><a href="#">Youtube</a></li>
-		     <li><img src="public/images/twitter.png" alt="" /><a href="#">Twitter</a></li>
-		     <li><img src="public/images/yelp.png" alt="" /><a href="#">Help</a></li>
+		     <li><img src="<?=PublicUrl.'images/facebook.png'?>" alt="" /><a href="#">Facebook</a></li>
+		     <li><img src="<?=PublicUrl.'images/flickr.png'?>" alt="" /><a href="#">Flickr</a></li>
+		     <li><img src="<?=PublicUrl.'images/google.png'?>" alt="" /><a href="#">Google</a></li>
+		     <li><img src="<?=PublicUrl.'images/yahoo.png'?>" alt="" /><a href="#">Yahoo</a></li>
+		     <li><img src="<?=PublicUrl.'images/youtube.png'?>" alt="" /><a href="#">Youtube</a></li>
+		     <li><img src="<?=PublicUrl.'images/twitter.png'?>" alt="" /><a href="#">Twitter</a></li>
+		     <li><img src="<?=PublicUrl.'images/yelp.png'?>" alt="" /><a href="#">Help</a></li>
 		    </ul>
 		</div>
 	</div>

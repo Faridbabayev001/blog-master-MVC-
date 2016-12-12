@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>The Free Blogsite.com Website Template | About :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../public/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="<?=PublicUrl.'css/style.css'?>" rel="stylesheet" type="text/css" media="all"/>
 <link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -123,15 +123,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="footer_grid3">
 		<h3>We're Social</h3>
 		<div class="img_list">
-		   <ul>
-		     <li><img src="../public/images/facebook.png" alt="" /><a href="#">Facebook</a></li>
-		     <li><img src="../public/images/flickr.png" alt="" /><a href="#">Flickr</a></li>
-		     <li><img src="../public/images/google.png" alt="" /><a href="#">Google</a></li>
-		     <li><img src="../public/images/yahoo.png" alt="" /><a href="#">Yahoo</a></li>
-		     <li><img src="../public/images/youtube.png" alt="" /><a href="#">Youtube</a></li>
-		     <li><img src="../public/images/twitter.png" alt="" /><a href="#">Twitter</a></li>
-		     <li><img src="../public/images/yelp.png" alt="" /><a href="#">Help</a></li>
-		   </ul>
+			<ul>
+			 <li><img src="<?=PublicUrl.'images/facebook.png'?>" alt="" /><a href="#">Facebook</a></li>
+			 <li><img src="<?=PublicUrl.'images/flickr.png'?>" alt="" /><a href="#">Flickr</a></li>
+			 <li><img src="<?=PublicUrl.'images/google.png'?>" alt="" /><a href="#">Google</a></li>
+			 <li><img src="<?=PublicUrl.'images/yahoo.png'?>" alt="" /><a href="#">Yahoo</a></li>
+			 <li><img src="<?=PublicUrl.'images/youtube.png'?>" alt="" /><a href="#">Youtube</a></li>
+			 <li><img src="<?=PublicUrl.'images/twitter.png'?>" alt="" /><a href="#">Twitter</a></li>
+			 <li><img src="<?=PublicUrl.'images/yelp.png'?>" alt="" /><a href="#">Help</a></li>
+			</ul>
 		</div>
 	</div>
 	</div>

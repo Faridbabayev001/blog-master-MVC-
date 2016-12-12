@@ -35,7 +35,7 @@
                 <td><?=$view['id']?></td>
                 <td><?=$view['author']?></td>
                 <td><?=$view['about']?></td>
-                <td><img src="<?=url.'public/images/'.$view['image']?>"></td>
+                <td><img width="200px" src="<?=PublicUrl.'uploads/'.$view['image']?>"></td>
                 <td><?=$view['view']?></td>
                 <td>
                   <a class="btn btn-danger" href="<?=url.'Admin/delete/'.$view['id']?>">Delete</a>

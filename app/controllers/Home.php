@@ -1,9 +1,7 @@
 
 <?php
 
-/**
- *
- */
+
 class Home extends baseController
 {
 
@@ -18,8 +16,18 @@ class Home extends baseController
    $this->view('/pages/index',$data);
  }
 
- public function single()
+ public function single($id)
  {
-   $this->view('pages/single');
+   $data['single'] = $this->model->getById($id);
+   if ($data['single']['id'] = $id) {
+    //  var_dump($data['single']);
+     print_r('<pre>');
+     print_r($data['single']['id']);
+     print_r('</pre>');
+    //  $this->view('pages/single',$data);
+   }else {
+    //  var_dump($data['single']);
+     $this->view('errors/404');
+   }
  }
 }
